@@ -1,0 +1,12 @@
+{
+    "name": "sooky/database_import",
+    "description": "Database import project",
+    "autoload": {
+        "psr-4": {
+            "Sooky\\DatabaseImport\\": "src/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.0"
+    }
+}
