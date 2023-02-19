@@ -6,10 +6,8 @@ use Sooky\DatabaseImport\interfaces\Reader;
 
 class CsvReader implements Reader
 {
-    public function read(string $filePath)
+    public function read(string $filePath): array
     {
-        echo 'I am reading mkay' . PHP_EOL;
-
         if (($handle = fopen($filePath, "r"))) {
             while (($data = fgetcsv($handle, 1000, ";"))) {
                 $result[] = $data;

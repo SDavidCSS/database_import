@@ -4,7 +4,7 @@ namespace Sooky\DatabaseImport\classes;
 
 class Preparator
 {
-    public function prepare(array $data)
+    public function prepare(array $data): array
     {
         [$header, $rows] = $data;
         $preparedData = [];

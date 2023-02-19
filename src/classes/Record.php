@@ -17,7 +17,7 @@ abstract class Record implements RecordInterface
         if(method_exists($this, $m)) return $this->$m();
     }
 
-    public static function findOne($conditions)
+    public static function findOne($conditions): static
     {
         $tableName = static::tableName();
 

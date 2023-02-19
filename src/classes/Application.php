@@ -42,11 +42,10 @@ class Application
             }
 
             echo 'Database updated' . PHP_EOL;
-
         }
     }
 
-    protected function prepare($readData)
+    protected function prepare($readData): array
     {
         return $this->preparator->prepare($readData);
     }
