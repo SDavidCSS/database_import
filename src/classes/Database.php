@@ -77,7 +77,7 @@ class Database extends PDO
         if(empty($products)) {
             $this->execute($sql, 'Table products filled with data');
         } else {
-            echo 'Products table is already filled with data';
+            echo 'Products table is already filled with data' . PHP_EOL;
         }
     }
 

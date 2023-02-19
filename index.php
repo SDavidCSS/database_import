@@ -1,13 +1,15 @@
 <?php
 
 use Sooky\DatabaseImport\classes\Application;
-use Sooky\DatabaseImport\classes\Database;
 
 require_once __DIR__ . '/vendor/autoload.php';
-$db_config = require_once __DIR__ . '/src/config/db.php';
 
-$db = Database::getInstance($db_config);
-$app = new Application($db);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-$app->initDatabase();
+$config = require_once __DIR__ . '/src/config/config.php';
+$app = new Application($config);
+
+//$app->initDatabase();
+$app->import();
 //$app->dropDatabase();
